@@ -1,0 +1,16 @@
+<main>
+  <div class="container">
+    <form #paysafeform="ngForm" (ngSubmit)="paysafecheckout()">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" required class="form-control" name="email" [(ngModel)]="email" (change) ="validateEmail()" placeholder="Your email id" >
+        <div class="alert alert-danger" *ngIf="!validEmail">Please enter valid email</div>
+        <label for="amount">Enter Amount</label>
+        <input type="number" step=1 class="form-control" name="amount" [(ngModel)]="amount" (change) = "validateAmount()" placeholder="Enter amount"
+          required>
+        <div class="alert alert-danger" *ngIf="!validAmount">Please enter valid amount</div>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="amount == null || !validAmount || !validEmail">Pay Now</button>
+    </form>
+  </div>
+</main>
