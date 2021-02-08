@@ -5,13 +5,14 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static('./dist/paysafe-checkout-master'));
+// app.use(express.static('./dist/paysafe-checkout-master'));
 
 
 app.get(`/*`, function(req, res) {
-    res.sendFile(`index.html`, {root: 'dist/paysafe-checkout-master/'}
+    res.sendFile(`index.html`, {root: 'dist/paysafe-checkout-master/src'}
   );
   });
+
 
 // app.use(express.static("./dist/roiim-paysafe"));
 
