@@ -18,7 +18,7 @@ const app = express();
 
 app.get('/*', function(req,res) {
     
-res.sendFile(path.join(__dirname+'/dist/paysafe-checkout-master/src/index.html'));
+res.sendFile(path.join(__dirname+'/dist/paysafe-checkout-master/index.html'));
 });
 
 
