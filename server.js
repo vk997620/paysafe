@@ -14,7 +14,7 @@ const app = express();
 //   });
 
 
-app.use(express.static(__dirname + '/dist/paysafe-checkout-master'));
+// app.use(express.static(__dirname + '/dist/paysafe-checkout-master'));
 
 app.get('/*', function(req,res) {
     
